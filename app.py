@@ -38,7 +38,7 @@ if not os.path.exists(preprocessor_path):
 
 model = joblib.load(model_path)
 preprocessor = joblib.load(preprocessor_path)
-model = joblib.load("decision_tree_model.pkl")
+model = joblib.load("decision_tree.pkl")
 preprocessor = joblib.load("preprocessor.pkl")
 
 # ----------------------------
