@@ -19,7 +19,25 @@ st.set_page_config(
 # ----------------------------
 # Load Model
 # ----------------------------
+import os
+import joblib
+import streamlit as st
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model_path = os.path.join(BASE_DIR, "decision_tree.pkl")
+preprocessor_path = os.path.join(BASE_DIR, "preprocessor.pkl")
+
+if not os.path.exists(model_path):
+    st.error(f"Model file not found: {model_path}")
+    st.stop()
+
+if not os.path.exists(preprocessor_path):
+    st.error(f"Preprocessor file not found: {preprocessor_path}")
+    st.stop()
+
+model = joblib.load(model_path)
+preprocessor = joblib.load(preprocessor_path)
 model = joblib.load("decision_tree.pkl")
 preprocessor = joblib.load("preprocessor.pkl")
 
