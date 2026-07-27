@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+joblib
+langchain
+langchain-community
+langchain-groq
+faiss-cpu
+sentence-transformers
+python-dotenv
+groq
